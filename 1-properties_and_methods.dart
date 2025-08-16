@@ -1,14 +1,15 @@
-class Book {
-  final title;
-  final author;
+class Person {
+  String name = "";
+  int age = 0;
 
-  Book(this.title, this.author);
-  Book.untitled() : title = "Untitled", author = "Unknown";
+  void introduce() {
+    print("Hi, I'm $name and I'm $age years old.");
+  }
 }
 
 void main() {
-  var custom = Book('1984', 'George Orwell');
-  var defaultBook = Book.untitled();
-  print('${custom.title}, by ${custom.author}');
-  print('${defaultBook.title}, by ${defaultBook.author}');
+  Person person = Person();
+  person.name = 'Alice';
+  person.age = 30;
+  person.introduce();
 }

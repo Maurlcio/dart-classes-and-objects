@@ -14,7 +14,7 @@ void main(){
   for (SmartDevice device in controller.devices){
     device.turnOn();
   }
-  controller.devices[2].turnOff();
+  controller.devices[2].turnOff(); //turning off the alarm in order to trigger it
   (controller.devices[1] as Thermostat).setTemperature(22);
 
   controller.runDiagnostics();
